@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Hugo 文章内链优化显示 :: 嘀嘀哩の小窝</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="UTF-8"/>
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<script>if ( false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="好久好久之前（2年前），写过这功能：《Bitcron 文章内链自动优化显示》，如下效果：
+本文利用 Hugo 的 Shortcodes 功能和 .GetPage 函数来实现。
+"/>
+<meta name="keywords" content=""/>
+<meta name="referrer" content="same-origin">
+<link rel="canonical" href="https://i.ddli.cn/hugo-shortcodes-article-link/" />
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="https://fonts.lug.ustc.edu.cn/css?family=Noto+Serif+SC:500&display=swap" media="print" onload="this.media='all'">
+<link rel="shortcut icon" href="https://i.ddli.cn/favicon.ico">
+
+<meta property="og:title" content="Hugo 文章内链优化显示" />
+<meta property="og:description" content="好久好久之前（2年前），写过这功能：《Bitcron 文章内链自动优化显示》，如下效果：
+
+
+本文利用 Hugo 的 Shortcodes 功能和 .GetPage 函数来实现。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://i.ddli.cn/hugo-shortcodes-article-link/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-04-05T22:30:27&#43;08:00" />
+<meta property="article:modified_time" content="2020-04-05T22:30:27&#43;08:00" />
+
+
+
+
+    
+  <link rel="prefetch" href="https://i.ddli.cn/hugo-readdir-photos/">
+  <link rel="prefetch" href="https://i.ddli.cn/hugo-template-code/">
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="https://i.ddli.cn" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__text">嘀嘀哩の小窝</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu hidden">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/photos/">相册</a></li>
+        
+      
+        
+          <li><a href="/movies/">电影</a></li>
+        
+      
+        
+          <li><a href="/books/">阅读</a></li>
+        
+      
+        
+          <li><a href="/archives/">归档</a></li>
+        
+      
+        
+          <li><a href="/about/">关于</a></li>
+        
+      
+    
+
+                <li><a href="/search/"><svg t="1556783211810" class="search-box-icon" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2078" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M981.39652054 920.86314525L704.56522859 644.0318533a366.65501012 366.65501012 0 1 0-61.73503038 65.64040943L917.55859375 984.40065827z m-856.17925347-493.12920861a284.19142939 284.19142939 0 1 1 283.89101562 284.19142939A284.49184317 284.49184317 0 0 1 125.06706019 427.73393664z" fill="" p-id="2079" data-spm-anchor-id="a313x.7781069.0.i2"></path></svg></a></li>
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/photos/">相册</a></li>
+      
+    
+      
+        <li><a href="/movies/">电影</a></li>
+      
+    
+      
+        <li><a href="/books/">阅读</a></li>
+      
+    
+      
+        <li><a href="/archives/">归档</a></li>
+      
+    
+      
+        <li><a href="/about/">关于</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+
+
+      <div class="content">
+        
+  
+  
+  
+  
+  <div class="post posts\coding\hugo-shortcodes-article-link.md">
+    <div  class="breadcrumb">
+  
+
+  
+
+  
+
+  
+
+<li>
+  <a href="https://i.ddli.cn/">首页</a>
+</li>
+
+
+<li>
+  <a href="https://i.ddli.cn/posts/">文章</a>
+</li>
+
+
+<li>
+  <a href="https://i.ddli.cn/posts/coding/">折腾</a>
+</li>
+
+
+<li class="active">
+  <a href="https://i.ddli.cn/hugo-shortcodes-article-link/">Hugo 文章内链优化显示</a>
+</li>
+
+</div>
+
+
+  
+    <h2 class="post-title"><a href="https://i.ddli.cn/hugo-shortcodes-article-link/">Hugo 文章内链优化显示</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">2020-04-05 22:30:27</span><span> / <span id="twikoo_visitors">0</span> 阅读</span><span> / <a href="#twikoo"><span id="twikoo_count">0 条评论</span></a></span>
+        
+          
+        
+      
+    </div>
+
+    
+  
+    <div class="post-content">
+      <p>好久好久之前（2年前），写过这功能：<a href="https://immmmm.com/bitcron-auto-article-refer/">《Bitcron 文章内链自动优化显示》</a>，如下效果：</p>
+
+
+<p>本文利用 Hugo 的 <a href="https://gohugo.io/extras/shortcodes/">Shortcodes</a> 功能和 <a href="https://gohugo.io/functions/getpage/">.GetPage</a> 函数来实现。</p>
+<h3 id="功能代码">功能代码</h3>
+<p>创建 <code>/layouts/shortcodes/link.html</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{$URL := .Get 0}}
+{{ with .Site.GetPage $URL }}
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview&#34;</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--meta&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:100%;&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--middle&#34;</span>&gt;
+      &lt;<span style="color:#f92672">h4</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--title&#34;</span>&gt;
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+      &lt;/<span style="color:#f92672">h4</span>&gt;
+      &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--date&#34;</span>&gt;{{ .Date.Format ( default &#34;2006-01-02&#34;) }}&lt;/<span style="color:#f92672">time</span>&gt;
+      {{ if .Params.tags }}
+      &lt;<span style="color:#f92672">small</span>&gt;{{ range .Params.tags }}#{{ . }}&amp;nbsp;{{ end }}&lt;/<span style="color:#f92672">small</span>&gt;
+      {{ end }}
+      &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;max-height:105px;overflow:hidden;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--excerpt&#34;</span>&gt;
+        {{ .Summary | plainify}}
+      &lt;/<span style="color:#f92672">section</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+{{ end }}
+</code></pre></div><h3 id="样式代码">样式代码</h3>
+<p>样式 CSS 代码需自行调配，个人是复用豆瓣条目的：</p>
+
+
+<h3 id="食用方式">食用方式</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">\{\{&lt;<span style="color:#f92672">link</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">bitcron-auto-article-refer</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;\}\}
+</code></pre></div><p>文章内去掉反斜杠 <code>\</code> 插入即可。</p>
+<p>其中 <code>link</code> 匹配短代码模板 <code>link.html</code> ，之后填的 <code>bitcron-auto-article-refer</code> 是文章 md 的文件名。</p>
+      
+    </div>
+  
+    
+
+    
+      <span class="post-tags">
+        
+          #<a href="https://i.ddli.cn/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+        
+      </span>
+    
+  
+    <div class="clear"></div>
+    
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            
+              <a class="pagination__title-h" href="https://github.com/wwvvv/ddli/edit/master/content/posts/coding/hugo-shortcodes-article-link.md" target="_blank" rel="noopener">阅读更多</a>
+            
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="https://i.ddli.cn/hugo-readdir-photos/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">Hugo 添加相册页面</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="https://i.ddli.cn/hugo-template-code/">
+                  <span class="button__text">Hugo 主题常用的代码片段</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+
+    
+        <div class="pagination__title">
+  <span class="pagination__title-h">欢迎评论</span>
+  <hr />
+</div>
+  <div id="tcomment"></div>
+  <script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.0-alpha.5/dist/twikoo.all.min.js"></script>
+  <script>twikoo.init({ envId: 'hello-cloudbase-9g7xvavg4e9206f7', el: '#tcomment' })</script>
+
+
+
+  <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      var checkComments = setInterval(function() {
+        var counts = $('.tk-comments-title').find('span').first().text();
+        if (counts) {
+          $('#twikoo_count').text(counts)
+          clearInterval(checkComments);
+        }
+      }, 1000);
+      if(window.location.hash){
+        var checkExist = setInterval(function() {
+          if ($(window.location.hash).length) {
+            $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+            clearInterval(checkExist);
+          }
+        }, 100);
+      }
+    });
+  </script>
+    
+
+    </div>
+
+      </div>
+
+      
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright">
+      <span>共 30 篇文章</span><span> 28786 字</span>
+    </div>
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm@gh-pages/main.js"></script>
+
+<script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm@gh-pages/lately2.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm@gh-pages/waterfall.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm@gh-pages/slimbox2.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm@gh-pages/main-diy-0621.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script>
+      
+    </div>
+  </body>
+</html>
