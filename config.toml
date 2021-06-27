@@ -1,7 +1,7 @@
 baseURL  =  "https://i.ddli.cn"
 languageCode = "zh-CN"
 # DefaultContentLanguage = "zh-CN"
-title  =  "嘀嘀哩の小窝x"
+title  =  "嘀嘀哩の小窝"
 subtitle = "如鱼得水，冷暖自知"
 
 theme  =  "hello-friend"
