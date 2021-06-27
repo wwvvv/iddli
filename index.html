@@ -265,6 +265,39 @@
     </div>
     
     
+    <div class="post on-list coding">
+    
+      <h1 class="post-title"><a href="https://i.ddli.cn/hugo-hello/">Hugo hello</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-06-26 21:59:00
+          </span>
+        
+
+        
+        <span class="">
+          
+            #<a href="https://i.ddli.cn/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
+          
+        </span>
+        
+      </div>
+
+      
+
+      <div class="post-content $PostCate">
+      
+        <p>终于折腾完了</p>
+<p><a href="https://imgtu.com/i/RYXJZ8"><img loading='lazy' src="https://z3.ax1x.com/2021/06/27/RYXJZ8.gif" alt="RYXJZ8.gif"  /></a></p>
+
+        
+      
+      </div>
+    
+    </div>
+    
+    
     <div class="post on-list daily">
     
       <h1 class="post-title"><a href="https://i.ddli.cn/brawl-stars-tx/">荒野乱斗，其乐无穷</a></h1>
@@ -466,46 +499,6 @@
     
     </div>
     
-    
-    <div class="post on-list coding">
-    
-      <h1 class="post-title"><a href="https://i.ddli.cn/hugo-total-count/">Hugo 总文章数和总字数</a></h1>
-      <div class="post-meta">
-        
-          <span class="post-date">
-            2020-04-10 14:46:43
-          </span>
-        
-
-        
-        <span class="">
-          
-            #<a href="https://i.ddli.cn/tags/%E6%8A%98%E8%85%BE/">折腾</a>&nbsp;
-          
-        </span>
-        
-      </div>
-
-      
-
-      <div class="post-content $PostCate">
-      
-        <p>前者在某个大神主题中翻到，一句代码：</p>
-<pre><code>共 {{ len (where .Site.RegularPages &quot;Section&quot; &quot;posts&quot;) }} 篇文章
-</code></pre><p>总字数没有现成参数，官方手册看到 <a href="https://gohugo.io/functions/scratch/">.Scratch.Add</a> 瞎折腾完成:</p>
-<pre><code>{{$scratch := newScratch}}
-{{ range (where .Site.Pages &quot;Kind&quot; &quot;page&quot; )}}
-    {{$scratch.Add &quot;total&quot; .WordCount}}
-{{ end }}
-</code></pre><p>新建了个参数累加所有文章的 <code>.WordCount</code> 字数，一般放 footer 头几行，下面是调用代码：</p>
-<pre><code>总计 {{$scratch.Get &quot;total&quot; }} 字
-</code></pre>
-        
-      
-      </div>
-    
-    </div>
-    
     <div class="pagination">
   <div class="pagination__buttons">
     
@@ -603,11 +596,13 @@
 
     
 
+    
+
 
 <footer class="footer">
   <div class="footer__inner">
     <div class="copyright">
-      <span>共 31 篇文章</span><span> 28790 字</span>
+      <span>共 32 篇文章</span><span> 28796 字</span>
     </div>
     
       <div class="copyright">
