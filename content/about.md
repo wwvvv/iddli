@@ -1,5 +1,5 @@
 ---
-title: '关于'
+title: '友情链接'
 date: 2020-03-14 12:41:27
 layout: 'posts'
 ---
