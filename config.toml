@@ -1,7 +1,7 @@
 baseURL  =  "https://i.ddli.cn"
 languageCode = "zh-CN"
 # DefaultContentLanguage = "zh-CN"
-title  =  "嘀嘀哩の小窝"
+title  =  "ACG儿资源分享站"
 subtitle = "如鱼得水，冷暖自知"
 
 theme  =  "hello-friend"
@@ -22,11 +22,11 @@ rssLimit = 5
   url="/photos/"
   weight="1"
   [[menu.main]]
-  name="电影"
+  name="动漫"
   url="/movies/"
   weight="2"
   [[menu.main]]
-  name="阅读"
+  name="小说"
   url="/books/"
   weight="3"
   [[menu.main]]
