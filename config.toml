@@ -18,7 +18,7 @@ rssLimit = 5
 
 [menu]
   [[menu.main]]
-  name="相册"
+  name="壁纸"
   url="/photos/"
   weight="1"
   [[menu.main]]
