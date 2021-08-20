@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     
-      <title>Hugo 添加面包屑导航 :: ACGR</title>
+      <title>Hugo 添加面包屑导航 :: ACGR绅士游戏</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta charset="UTF-8"/>
@@ -47,7 +47,7 @@
   <span class="header__inner">
     <a href="https://acgr.xyz" class="logo" style="text-decoration: none;">
   
-    <span class="logo__text">ACGR</span>
+    <span class="logo__text">ACGR绅士游戏</span>
     <span class="logo__cursor"></span>
   
 </a>
@@ -205,7 +205,7 @@
     └── static
         └── style.css # 添加样式代码
 </code></pre><p><code>breadcrumb.html</code> 代码如下（来自官网，具体含义我也不懂）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span>  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;breadcrumb&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span>  <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;breadcrumb&#34;</span>&gt;
   {{ template &#34;breadcrumbnav&#34; (dict &#34;p1&#34; . &#34;p2&#34; .) }}
 &lt;/<span style="color:#f92672">div</span>&gt;
 {{ define &#34;breadcrumbnav&#34; }}
@@ -219,9 +219,9 @@
 &lt;/<span style="color:#f92672">li</span>&gt;
 {{ end }}
 </code></pre></div><p><code>single.html</code> 和各 <code>list.html</code> 插入调用代码，当然只插 single 也OK啦：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ partial &#34;breadcrumb.html&#34; . }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ partial &#34;breadcrumb.html&#34; . }}
 </code></pre></div><p><code>style.css</code> 样式代码（来自 <a href="https://www.rectcircle.cn/posts/blog-migration/#%e5%ae%9e%e7%8e%b0%e7%b3%bb%e5%88%97%e6%96%87%e7%ab%a0">@rectcircle</a>）：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* breadcrumb */</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* breadcrumb */</span>
 .<span style="color:#a6e22e">breadcrumb</span> {<span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#fafafa</span>;<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">margin-bottom</span>:<span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">list-style</span>:<span style="color:#66d9ef">none</span>;<span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>; }
 .<span style="color:#a6e22e">breadcrumb</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">li</span>{<span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">inline-block</span>;<span style="color:#66d9ef">opacity</span>:<span style="color:#ae81ff">.7</span>;}
 .<span style="color:#a6e22e">breadcrumb</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">li</span><span style="color:#f92672">+</span><span style="color:#f92672">li</span>:<span style="color:#a6e22e">before</span> {<span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#ccc</span>; <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;&gt;&#34;</span>; }

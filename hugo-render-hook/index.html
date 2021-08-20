@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     
-      <title>Hugo 图片懒加载 :: ACGR</title>
+      <title>Hugo 图片懒加载 :: ACGR绅士游戏</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta charset="UTF-8"/>
@@ -43,7 +43,7 @@
   <span class="header__inner">
     <a href="https://acgr.xyz" class="logo" style="text-decoration: none;">
   
-    <span class="logo__text">ACGR</span>
+    <span class="logo__text">ACGR绅士游戏</span>
     <span class="logo__cursor"></span>
   
 </a>
@@ -184,11 +184,11 @@
     <div class="post-content">
       <p>起因，想给文章插入的 img 图片添加 <code>loading='lazy'</code>，果然有爱折腾的，看（<a href="https://lvv.me/posts/2019/12/24_hugo_render_hooks/">这里</a>），官方说明 <a href="https://gohugo.io/getting-started/configuration-markup/#render-hook-templates">#render-hook-templates</a>，Hugo v0.62+</p>
 <p>简单说能对md内的链接（link）和图像（image）自定义渲染，比如实现以上需求，只需在主题新建 <code>layouts/_default/_markup/render-image.html</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">layouts/_default
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">layouts/_default
 ├── _markup
 │   └── render-image.html
 </code></pre></div><p>丢入代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;md_image&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;md_image&#34;</span>&gt;
   &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">loading</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lazy&#39;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Destination | safeURL }}&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Text }}&#34;</span> <span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">with</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Title</span><span style="color:#960050;background-color:#1e0010">}}</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ . }}&#34;</span><span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}</span> /&gt;
 &lt;/<span style="color:#f92672">p</span>&gt;
 </code></pre></div><p>🐯🐶一下，收工！等等，这么简单？！再来个图片自动 jsdelivr cdn 前缀？</p>

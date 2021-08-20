@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     
-      <title>折腾 :: ACGR</title>
+      <title>折腾 :: ACGR绅士游戏</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta charset="UTF-8"/>
@@ -26,7 +26,7 @@
 
 
 
-<link rel="alternate" type="application/rss+xml" href="/posts/coding/index.xml" title="ACGR" />
+<link rel="alternate" type="application/rss+xml" href="/posts/coding/index.xml" title="ACGR绅士游戏" />
 
     
   
@@ -39,7 +39,7 @@
   <span class="header__inner">
     <a href="https://acgr.xyz" class="logo" style="text-decoration: none;">
   
-    <span class="logo__text">ACGR</span>
+    <span class="logo__text">ACGR绅士游戏</span>
     <span class="logo__cursor"></span>
   
 </a>
@@ -454,11 +454,11 @@
         <h3 id="全站-site">全站 Site</h3>
 <p>网址：<code>.Site.BaseURL</code></p>
 <p>标题：<code>.Site.Title</code>，示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}&#34;</span>&gt;{{ $.Site.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}&#34;</span>&gt;{{ $.Site.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
 </code></pre></div><p>副标题：<code>.Site.Params.description</code></p>
 <p>关键词：<code>.Site.Params.keywords</code></p>
 <p>头部菜单：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range $.Site.Menus.main }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range $.Site.Menus.main }}
 	&lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .URL }}&#34;</span>&gt;{{ .Name }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
 {{ end }}
 </code></pre></div>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     
-      <title>Hugo 主题常用的代码片段 :: ACGR</title>
+      <title>Hugo 主题常用的代码片段 :: ACGR绅士游戏</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta charset="UTF-8"/>
@@ -55,7 +55,7 @@
   <span class="header__inner">
     <a href="https://acgr.xyz" class="logo" style="text-decoration: none;">
   
-    <span class="logo__text">ACGR</span>
+    <span class="logo__text">ACGR绅士游戏</span>
     <span class="logo__cursor"></span>
   
 </a>
@@ -193,11 +193,11 @@
       <h3 id="全站-site">全站 Site</h3>
 <p>网址：<code>.Site.BaseURL</code></p>
 <p>标题：<code>.Site.Title</code>，示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}&#34;</span>&gt;{{ $.Site.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}&#34;</span>&gt;{{ $.Site.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
 </code></pre></div><p>副标题：<code>.Site.Params.description</code></p>
 <p>关键词：<code>.Site.Params.keywords</code></p>
 <p>头部菜单：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range $.Site.Menus.main }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range $.Site.Menus.main }}
 	&lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .URL }}&#34;</span>&gt;{{ .Name }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
 {{ end }}
 </code></pre></div><p><code>config.toml</code>配置示例：</p>
@@ -216,19 +216,19 @@ title  =  &quot;木木木木木&quot;
 		url=&quot;/about&quot;
 		weight=&quot;2&quot;
 </code></pre><p>全站标签列表及文章数量：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
 	&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/tags/{{ $name | urlize }}&#34;</span>&gt;#{{ $name }}&lt;<span style="color:#f92672">small</span>&gt;({{ .Count }})&lt;/<span style="color:#f92672">small</span>&gt;&lt;/<span style="color:#f92672">a</span>&gt;
 {{- end -}}
 </code></pre></div><p>全站文章数：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">共 {{ len (where .Site.RegularPages &#34;Section&#34; &#34;posts&#34;) }} 篇日志
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">共 {{ len (where .Site.RegularPages &#34;Section&#34; &#34;posts&#34;) }} 篇日志
 </code></pre></div><h3 id="文章列表-list">文章列表 List</h3>
 <p>文章摘要：<code>.Summary</code> 文章列表会显示 <code>&lt;!--more--&gt;</code> 前的内容或自动截断。</p>
 <pre><code>{{ .Summary | plainify }}
 </code></pre><p><code>config.toml</code>配置阶段字符，默认 70 个：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">summaryLength = 140
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">summaryLength = 140
 </code></pre></div><p>截断判断：<code>.Truncated</code> 如果有 more 标签，则 true，显示“阅读全文”字样。</p>
 <p>指定 <code>content/posts</code> 为文章内容，且自动截断：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{  $paginator := .Paginate (where .Site.RegularPages &#34;Type&#34; &#34;posts&#34;) }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{  $paginator := .Paginate (where .Site.RegularPages &#34;Type&#34; &#34;posts&#34;) }}
 {{ range $paginator.Pages }}
 &lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
   &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-title&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h1</span>&gt;
@@ -245,7 +245,7 @@ title  =  &quot;木木木木木&quot;
 {{- end }}
 </code></pre></div><p>神奇的日期格式化：<code>&quot;2006-01-02 15:04:05&quot;</code> 表示显示年月日时分秒</p>
 <p>文章列表分页：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span>&gt;
   {{ if .Paginator.HasPrev }}
     &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Paginator.Prev.URL }}&#34;</span>&gt;上一页&lt;/<span style="color:#f92672">a</span>&gt;
   {{ end }}
@@ -259,10 +259,10 @@ title  =  &quot;木木木木木&quot;
 <p>文字数：<code>.WordCount</code>，配合<code>config.toml</code>中文统计更准确：</p>
 <pre><code>hasCJKLanguage = true
 </code></pre><p>阅读时间：<code>.ReadingTime</code>，示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">约{{ .ReadingTime }}分钟读完
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">约{{ .ReadingTime }}分钟读完
 </code></pre></div><p>分类 <code>.Params.categories</code>
 标签 <code>.Params.tags</code>，示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if .Params.tags }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ if .Params.tags }}
 	&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-tags&#34;</span>&gt;
 	{{ range .Params.tags }}
 		#&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ (urlize (printf &#34;</span><span style="color:#a6e22e">tags</span><span style="color:#960050;background-color:#1e0010">/%</span><span style="color:#a6e22e">s</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">.</span> <span style="color:#960050;background-color:#1e0010">))</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">absURL</span> <span style="color:#960050;background-color:#1e0010">}}/&#34;</span>&gt;{{ . }}&lt;/<span style="color:#f92672">a</span>&gt;&amp;nbsp;
@@ -270,7 +270,7 @@ title  =  &quot;木木木木木&quot;
 	&lt;/<span style="color:#f92672">span</span>&gt;
 {{ end }}
 </code></pre></div><p>上、下文章链接标题，示例：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pagination&#34;</span>&gt;
 	{{ if .NextInSection }}
 		&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .NextInSection.Permalink }}&#34;</span>&gt;{{ .NextInSection.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
 	{{ end }}

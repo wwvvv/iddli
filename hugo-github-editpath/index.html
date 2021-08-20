@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     
-      <title>前端编辑 Hugo 文章 :: ACGR</title>
+      <title>前端编辑 Hugo 文章 :: ACGR绅士游戏</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta charset="UTF-8"/>
@@ -46,7 +46,7 @@ https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hugo-themes.md
   <span class="header__inner">
     <a href="https://acgr.xyz" class="logo" style="text-decoration: none;">
   
-    <span class="logo__text">ACGR</span>
+    <span class="logo__text">ACGR绅士游戏</span>
     <span class="logo__cursor"></span>
   
 </a>
@@ -182,12 +182,12 @@ https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hugo-themes.md
   
     <div class="post-content">
       <p>目前发文是直接在 Github 前端进行，Hugo 的构建交给 <a href="https://immmmm.com/hugo-github-actions/">Github Actions</a> 实现自动化部署。因此，产生个需求，文章里改个错别字什么的，能不能一键直达 GIthub 编辑页面？</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># 当面页面链接
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># 当面页面链接
 https://immmmm.com/hugo-themes/
 # Github 编辑页面链接
 https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hugo-themes.md
 </code></pre></div><p>想想是可行的，无非是根据当前文章的链接构建编辑页面的链接。直接放代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/lmm214/immmmm/edit/master/content/{{ replace .File.Path &#34;</span><span style="color:#960050;background-color:#1e0010">\\&#34;</span> <span style="color:#960050;background-color:#1e0010">&#34;/&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;编辑文章&lt;/<span style="color:#f92672">a</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/lmm214/immmmm/edit/master/content/{{ replace .File.Path &#34;</span><span style="color:#960050;background-color:#1e0010">\\&#34;</span> <span style="color:#960050;background-color:#1e0010">&#34;/&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;编辑文章&lt;/<span style="color:#f92672">a</span>&gt;
 </code></pre></div><p>为了页面美观，偷偷加到了某个地方。 ✌️</p>
       
     </div>

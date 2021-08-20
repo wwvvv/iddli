@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     
-      <title>Hugo 文章内链优化显示 :: ACGR</title>
+      <title>Hugo 文章内链优化显示 :: ACGR绅士游戏</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta charset="UTF-8"/>
@@ -45,7 +45,7 @@
   <span class="header__inner">
     <a href="https://acgr.xyz" class="logo" style="text-decoration: none;">
   
-    <span class="logo__text">ACGR</span>
+    <span class="logo__text">ACGR绅士游戏</span>
     <span class="logo__cursor"></span>
   
 </a>
@@ -186,7 +186,7 @@
 <p>本文利用 Hugo 的 <a href="https://gohugo.io/extras/shortcodes/">Shortcodes</a> 功能和 <a href="https://gohugo.io/functions/getpage/">.GetPage</a> 函数来实现。</p>
 <h3 id="功能代码">功能代码</h3>
 <p>创建 <code>/layouts/shortcodes/link.html</code>：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{$URL := .Get 0}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{$URL := .Get 0}}
 {{ with .Site.GetPage $URL }}
 &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview&#34;</span>&gt;
   &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--meta&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:100%;&#34;</span>&gt;
@@ -210,7 +210,7 @@
 
 
 <h3 id="食用方式">食用方式</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">\{\{&lt;<span style="color:#f92672">link</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">bitcron-auto-article-refer</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;\}\}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">\{\{&lt;<span style="color:#f92672">link</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">bitcron-auto-article-refer</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;\}\}
 </code></pre></div><p>文章内去掉反斜杠 <code>\</code> 插入即可。</p>
 <p>其中 <code>link</code> 匹配短代码模板 <code>link.html</code> ，之后填的 <code>bitcron-auto-article-refer</code> 是文章 md 的文件名。</p>
       

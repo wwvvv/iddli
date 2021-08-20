@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     
-      <title>Hugo 自定义文章样式 :: ACGR</title>
+      <title>Hugo 自定义文章样式 :: ACGR绅士游戏</title>
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta charset="UTF-8"/>
@@ -51,7 +51,7 @@ content
   <span class="header__inner">
     <a href="https://acgr.xyz" class="logo" style="text-decoration: none;">
   
-    <span class="logo__text">ACGR</span>
+    <span class="logo__text">ACGR绅士游戏</span>
     <span class="logo__cursor"></span>
   
 </a>
@@ -196,7 +196,7 @@ content
 │   ├── reading
 </code></pre><p>如 <code>chat</code> 目录内的 md 文件是以一句话的模式（头像+时间）显示，怎么实现呢？利用 Hugo 的 <a href="https://gohugo.io/variables/files/">.File.Dir</a> 和 <a href="https://gohugo.io/functions/replacere/">replaceRE</a> 正则。</p>
 <h3 id="核心代码如下">核心代码如下：</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ $PostCate := .File.Dir | replaceRE &#34;posts/(.*)/&#34; &#34;$1&#34;}}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ $PostCate := .File.Dir | replaceRE &#34;posts/(.*)/&#34; &#34;$1&#34;}}
 {{ if eq $PostCate &#34;chat&#34;}}
     &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-meta&#34;</span>&gt;
         {{ if .Date }}
@@ -211,7 +211,7 @@ content
     ……正常文章样式
 {{ end }}
 </code></pre></div><p>一般修改 <code>_default/list.html</code> 和 <code>_default/single.html</code>，其中 list 是放在文章列表的 <code>{{rang ……}}</code> 循环之中。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range 什么什么 .Pages }}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range 什么什么 .Pages }}
     ……这里
 {{ end }}
 </code></pre></div><h3 id="随意说明">随意说明</h3>
