@@ -1,7 +1,7 @@
 baseURL  =  "https://acgr.xyz"
 languageCode = "zh-CN"
 # DefaultContentLanguage = "zh-CN"
-title  =  "ACGR"
+title  =  "ACGR绅士游戏"
 subtitle = "如鱼得水，冷暖自知"
 
 theme  =  "hello-friend"
