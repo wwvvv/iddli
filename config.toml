@@ -1,4 +1,4 @@
-baseURL  =  "https://acgr.xyz"
+baseURL  =  "https://ddli.cn"
 languageCode = "zh-CN"
 # DefaultContentLanguage = "zh-CN"
 title  =  "嘀嘀哩资源分享站"
@@ -22,7 +22,7 @@ rssLimit = 5
   url="/photos/"
   weight="1"
   [[menu.main]]
-  name="影音"
+  name="影集"
   url="/movies/"
   weight="2"
   [[menu.main]]
