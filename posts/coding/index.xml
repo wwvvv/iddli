@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>折腾 on 嘀嘀哩资源分享站</title>
-    <link>https://acgr.xyz/posts/coding/</link>
+    <link>https://ddli.cn/posts/coding/</link>
     <description>Recent content in 折腾 on 嘀嘀哩资源分享站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 26 Jun 2020 21:59:00 +0800</lastBuildDate><atom:link href="https://acgr.xyz/posts/coding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Jun 2020 21:59:00 +0800</lastBuildDate><atom:link href="https://ddli.cn/posts/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo hello</title>
-      <link>https://acgr.xyz/hugo-hello/</link>
+      <link>https://ddli.cn/hugo-hello/</link>
       <pubDate>Fri, 26 Jun 2020 21:59:00 +0800</pubDate>
       
-      <guid>https://acgr.xyz/hugo-hello/</guid>
+      <guid>https://ddli.cn/hugo-hello/</guid>
       <description>终于折腾完了</description>
     </item>
     
     <item>
       <title>Hugo Theme Webstack</title>
-      <link>https://acgr.xyz/hugo-theme-webstack/</link>
+      <link>https://ddli.cn/hugo-theme-webstack/</link>
       <pubDate>Wed, 10 Jun 2020 09:15:25 +0800</pubDate>
       
-      <guid>https://acgr.xyz/hugo-theme-webstack/</guid>
+      <guid>https://ddli.cn/hugo-theme-webstack/</guid>
       <description>&lt;p&gt;新版本更新，感谢 &lt;a href=&#34;https://github.com/bolabola/stackf&#34;&gt;@ooiii&lt;/a&gt; 改进，所有内容（导航和板块）的增删排序直接在 &lt;code&gt;links.toml&lt;/code&gt; 内完成！ 👍&lt;/p&gt;
 &lt;p&gt;在线预览：&lt;a href=&#34;https://edui.fun/&#34;&gt;https://edui.fun/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;仓库下载：&lt;a href=&#34;https://github.com/lmm214/hugo-theme-webstack&#34;&gt;https://github.com/lmm214/hugo-theme-webstack&lt;/a&gt;&lt;/p&gt;</description>
@@ -29,10 +29,10 @@
     
     <item>
       <title>Hugo 自定义文章样式</title>
-      <link>https://acgr.xyz/hugo-diy-post-type/</link>
+      <link>https://ddli.cn/hugo-diy-post-type/</link>
       <pubDate>Sun, 12 Apr 2020 18:00:27 +0800</pubDate>
       
-      <guid>https://acgr.xyz/hugo-diy-post-type/</guid>
+      <guid>https://ddli.cn/hugo-diy-post-type/</guid>
       <description>&lt;p&gt;之前 WordPress 推出不同文章样式，如轻博客一样，发一句话、链接或视频有不同的显示效果。之后，用 Hexo、Bitcron 时都以文件夹形式进行文章分类，并以此为判断条件。&lt;/p&gt;
 &lt;p&gt;效果见：&lt;a href=&#34;https://immmmm.com/posts/chat/&#34;&gt;https://immmmm.com/posts/chat/&lt;/a&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;content
@@ -46,10 +46,10 @@
     
     <item>
       <title>Hugo 显示指定文件夹内图片</title>
-      <link>https://acgr.xyz/hugo-readdir-photos-single/</link>
+      <link>https://ddli.cn/hugo-readdir-photos-single/</link>
       <pubDate>Fri, 10 Apr 2020 20:38:16 +0800</pubDate>
       
-      <guid>https://acgr.xyz/hugo-readdir-photos-single/</guid>
+      <guid>https://ddli.cn/hugo-readdir-photos-single/</guid>
       <description>&lt;p&gt;效果见文章底部，这些图片非手动一张张插入，文章头部一句 &lt;code&gt;path: 2004gd&lt;/code&gt; 搞定！&lt;/p&gt;
 &lt;p&gt;直接看代码：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{ if .Params.path }}
@@ -61,10 +61,10 @@
     
     <item>
       <title>Hugo 总文章数和总字数</title>
-      <link>https://acgr.xyz/hugo-total-count/</link>
+      <link>https://ddli.cn/hugo-total-count/</link>
       <pubDate>Fri, 10 Apr 2020 14:46:43 +0800</pubDate>
       
-      <guid>https://acgr.xyz/hugo-total-count/</guid>
+      <guid>https://ddli.cn/hugo-total-count/</guid>
       <description>前者在某个大神主题中翻到，一句代码： 共 {{ len (where .Site.RegularPages &amp;quot;Section&amp;quot; &amp;quot;posts&amp;quot;) }} 篇文章 总字数没有现成参数，官方手册看到 .Scratch.Add 瞎折腾完成: {{$scratch := newScratch}} {{ range (where .Site.Pages &amp;quot;Kind&amp;quot; &amp;quot;page&amp;quot; )}} {{$scratch.Add &amp;quot;total&amp;quot; .WordCount}} {{ end }} 新建了个参数累加所有文章的 .WordCount 字数，一般放 footer 头几行，下面是调用代码： 总计 {{$scratch.Get &amp;quot;total&amp;quot; }} 字</description>
     </item>
     
