@@ -1,8 +1,8 @@
 baseURL  =  "https://acgr.xyz"
 languageCode = "zh-CN"
 # DefaultContentLanguage = "zh-CN"
-title  =  "ACGR绅士游戏"
-subtitle = "如鱼得水，冷暖自知"
+title  =  "嘀嘀哩资源分享站"
+subtitle = "嘀哩哩哩哩哩哩！嘀哩哩哩哩！"
 
 theme  =  "hello-friend"
 summaryLength = 140
@@ -22,11 +22,11 @@ rssLimit = 5
   url="/photos/"
   weight="1"
   [[menu.main]]
-  name="动漫"
+  name="影音"
   url="/movies/"
   weight="2"
   [[menu.main]]
-  name="小说"
+  name="阅读"
   url="/books/"
   weight="3"
   [[menu.main]]
