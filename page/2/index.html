@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.87.0" />
+	<meta name="generator" content="Hugo 0.88.1" />
     
       <title>ACGR绅士游戏</title>
     
@@ -164,14 +164,14 @@
       <div class="post-content $PostCate">
       
         <p>前者在某个大神主题中翻到，一句代码：</p>
-<pre><code>共 {{ len (where .Site.RegularPages &quot;Section&quot; &quot;posts&quot;) }} 篇文章
+<pre tabindex="0"><code>共 {{ len (where .Site.RegularPages &quot;Section&quot; &quot;posts&quot;) }} 篇文章
 </code></pre><p>总字数没有现成参数，官方手册看到 <a href="https://gohugo.io/functions/scratch/">.Scratch.Add</a> 瞎折腾完成:</p>
-<pre><code>{{$scratch := newScratch}}
+<pre tabindex="0"><code>{{$scratch := newScratch}}
 {{ range (where .Site.Pages &quot;Kind&quot; &quot;page&quot; )}}
     {{$scratch.Add &quot;total&quot; .WordCount}}
 {{ end }}
 </code></pre><p>新建了个参数累加所有文章的 <code>.WordCount</code> 字数，一般放 footer 头几行，下面是调用代码：</p>
-<pre><code>总计 {{$scratch.Get &quot;total&quot; }} 字
+<pre tabindex="0"><code>总计 {{$scratch.Get &quot;total&quot; }} 字
 </code></pre>
         
       
@@ -239,7 +239,7 @@
 <p>总有那么一瞬间特别特别想发一张照片，但不是以文章形式发布。</p>
 <p>实现思路是程序自动遍历指定文件夹内的图片，并展示在一个页面上。有了思路，剩下的就是看文档、看文档、看文档，此功能利用 Hugo 的 <a href="https://gohugo.io/templates/files/">readDir function</a> 函数达成。</p>
 <p>日常更新把图片丢到 <code>static/photos</code> 中即可（搭配 Github Action 自动化部署更香）：</p>
-<pre><code>static
+<pre tabindex="0"><code>static
 └── photos
     ├── 落樱缤纷.jpeg
     ├── 想象中的自由.jpeg

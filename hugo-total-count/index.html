@@ -176,14 +176,14 @@
   
     <div class="post-content">
       <p>前者在某个大神主题中翻到，一句代码：</p>
-<pre><code>共 {{ len (where .Site.RegularPages &quot;Section&quot; &quot;posts&quot;) }} 篇文章
+<pre tabindex="0"><code>共 {{ len (where .Site.RegularPages &quot;Section&quot; &quot;posts&quot;) }} 篇文章
 </code></pre><p>总字数没有现成参数，官方手册看到 <a href="https://gohugo.io/functions/scratch/">.Scratch.Add</a> 瞎折腾完成:</p>
-<pre><code>{{$scratch := newScratch}}
+<pre tabindex="0"><code>{{$scratch := newScratch}}
 {{ range (where .Site.Pages &quot;Kind&quot; &quot;page&quot; )}}
     {{$scratch.Add &quot;total&quot; .WordCount}}
 {{ end }}
 </code></pre><p>新建了个参数累加所有文章的 <code>.WordCount</code> 字数，一般放 footer 头几行，下面是调用代码：</p>
-<pre><code>总计 {{$scratch.Get &quot;total&quot; }} 字
+<pre tabindex="0"><code>总计 {{$scratch.Get &quot;total&quot; }} 字
 </code></pre>
       
     </div>

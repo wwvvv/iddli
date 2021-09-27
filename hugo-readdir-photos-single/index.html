@@ -186,14 +186,14 @@
     <div class="post-content">
       <p>效果见文章底部，这些图片非手动一张张插入，文章头部一句 <code>path: 2004gd</code> 搞定！</p>
 <p>直接看代码：</p>
-<pre><code>{{ if .Params.path }}
+<pre tabindex="0"><code>{{ if .Params.path }}
     {{$Path := .Params.path}}
     {{- range (readDir (printf &quot;%s%s&quot; &quot;./static/images/&quot; $Path )) -}}&lt;img loading='lazy' src=&quot;{{(printf &quot;/images/%s/%s&quot; $Path .Name ) | absURL}}&quot; /&gt;{{- end -}}
 {{ end }}
 </code></pre><p>当文章中写了 <code>path: 2004gd</code> 表示 Hugo 遍历根目录 <code>/static/images/2004gd</code> 内的图片并显示。</p>
 <p>这功能其实之前 Bitcron 的主题里就有，太符合老年人的需求了，一句话，一堆图片，一篇文章搞定！</p>
 <p>当然，如果使用 Github 托管，随手羊毛撸起，<code>lmm214/immmmm@gh-pages</code> 需自行更改：</p>
-<pre><code>{{ if .Params.path }}
+<pre tabindex="0"><code>{{ if .Params.path }}
     {{$Path := .Params.path}}
     {{- range (readDir (printf &quot;%s%s&quot; &quot;./static/images/&quot; $Path )) -}}&lt;img loading='lazy' src=&quot;{{(printf &quot;https://cdn.jsdelivr.net/gh/lmm214/immmmm@gh-pages/images/%s/%s&quot; $Path .Name ) | absURL}}&quot; /&gt;{{- end -}}
 {{ end }}

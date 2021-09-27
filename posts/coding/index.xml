@@ -35,7 +35,7 @@
       <guid>https://acgr.xyz/hugo-diy-post-type/</guid>
       <description>&lt;p&gt;之前 WordPress 推出不同文章样式，如轻博客一样，发一句话、链接或视频有不同的显示效果。之后，用 Hexo、Bitcron 时都以文件夹形式进行文章分类，并以此为判断条件。&lt;/p&gt;
 &lt;p&gt;效果见：&lt;a href=&#34;https://immmmm.com/posts/chat/&#34;&gt;https://immmmm.com/posts/chat/&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;content
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;content
 ├── posts
 │   ├── chat
 │   ├── coding
@@ -52,7 +52,7 @@
       <guid>https://acgr.xyz/hugo-readdir-photos-single/</guid>
       <description>&lt;p&gt;效果见文章底部，这些图片非手动一张张插入，文章头部一句 &lt;code&gt;path: 2004gd&lt;/code&gt; 搞定！&lt;/p&gt;
 &lt;p&gt;直接看代码：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{ if .Params.path }}
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{ if .Params.path }}
     {{$Path := .Params.path}}
     {{- range (readDir (printf &amp;quot;%s%s&amp;quot; &amp;quot;./static/images/&amp;quot; $Path )) -}}&amp;lt;img loading=&#39;lazy&#39; src=&amp;quot;{{(printf &amp;quot;/images/%s/%s&amp;quot; $Path .Name ) | absURL}}&amp;quot; /&amp;gt;{{- end -}}
 {{ end }}

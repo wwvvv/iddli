@@ -192,7 +192,7 @@
 <p>（注：如已把 Hugo 程序 push 到 GitHub 上，直接跳过看下一步。）</p>
 <p>点击下载：<a href="https://github.com/lmm214/edui/archive/master.zip">https://github.com/lmm214/edui/archive/master.zip</a></p>
 <p>GitHub 上新建一个 repo，并只需保留以下文件上传到 <code>master</code> ，同时随手建个 <code>gh-pages</code> 分支：</p>
-<pre><code>├── archetypes
+<pre tabindex="0"><code>├── archetypes
 │   └── default.md
 ├── config.toml  //Hugo 程序配置文件
 ├── content
@@ -221,7 +221,7 @@
 <p>回项目，点 <code>Actions -- New wordflow -- Set up a workflow yourself</code> ，添加如下代码：</p>
 </li>
 </ul>
-<pre><code>name: Deploy Hugo # 任君喜欢
+<pre tabindex="0"><code>name: Deploy Hugo # 任君喜欢
 
 on:
   push:
@@ -253,7 +253,7 @@ jobs:
 <p>日志？主题？统统 GitHub 网页端搞定！当然，调试主题什么的还是建议本地进行。</p>
 <h3 id="同步到服务器">同步到服务器</h3>
 <p>完整源文件 <a href="https://github.com/lmm214/edui/blob/master/.github/workflows/main.yml">【这里】</a> ，还有一段代码，实现同步推送到自己的服务器。</p>
-<pre><code>      - name: Webhook
+<pre tabindex="0"><code>      - name: Webhook
         uses: distributhor/workflow-webhook@v1
         env:
           webhook_url: ${{ secrets.WEBHOOK_URL }}
@@ -261,9 +261,9 @@ jobs:
 </code></pre><p><code>WEBHOOK_URL</code> 和 <code>WEBHOOK_SECRET</code> 是进项目 <code>settings/secrets</code> 新建添加，构建成宝塔面板的 webhook 链接（进面板-软件商店-装“webhook”），如：</p>
 <p><code>WEBHOOK_URL</code> 设为：<code>http://1.1.1.1/hook?access_key=密钥</code>;</p>
 <p><code>WEBHOOK_SECRET</code> 设为 <code>&amp;param=immmmm.com</code>;这样合并成：</p>
-<pre><code>http://1.1.1.1/hook?access_key=密钥&amp;param=immmmm.com
+<pre tabindex="0"><code>http://1.1.1.1/hook?access_key=密钥&amp;param=immmmm.com
 </code></pre><p>ip 和域名需需改，同时宝塔后台的 webhooks 添加同步代码，需修改本地路径、github 项目路径，代码如下：</p>
-<pre><code>#!/bin/bash
+<pre tabindex="0"><code>#!/bin/bash
 echo &quot;&quot;
 date --date='0 days ago' &quot;+%Y-%m-%d %H:%M:%S&quot;
 echo &quot;Start&quot;

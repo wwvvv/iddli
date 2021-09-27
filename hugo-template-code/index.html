@@ -201,7 +201,7 @@
 	&lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .URL }}&#34;</span>&gt;{{ .Name }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
 {{ end }}
 </code></pre></div><p><code>config.toml</code>配置示例：</p>
-<pre><code>baseURL  =  &quot;https://immmmm.com&quot;
+<pre tabindex="0"><code>baseURL  =  &quot;https://immmmm.com&quot;
 title  =  &quot;木木木木木&quot;
 [params]
 	description = &quot;不问明天，悠然浪费&quot;
@@ -223,7 +223,7 @@ title  =  &quot;木木木木木&quot;
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">共 {{ len (where .Site.RegularPages &#34;Section&#34; &#34;posts&#34;) }} 篇日志
 </code></pre></div><h3 id="文章列表-list">文章列表 List</h3>
 <p>文章摘要：<code>.Summary</code> 文章列表会显示 <code>&lt;!--more--&gt;</code> 前的内容或自动截断。</p>
-<pre><code>{{ .Summary | plainify }}
+<pre tabindex="0"><code>{{ .Summary | plainify }}
 </code></pre><p><code>config.toml</code>配置阶段字符，默认 70 个：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">summaryLength = 140
 </code></pre></div><p>截断判断：<code>.Truncated</code> 如果有 more 标签，则 true，显示“阅读全文”字样。</p>
@@ -257,7 +257,7 @@ title  =  &quot;木木木木木&quot;
 <p>标题、链接、时间，同上。</p>
 <p>全文内容：<code>.Content</code></p>
 <p>文字数：<code>.WordCount</code>，配合<code>config.toml</code>中文统计更准确：</p>
-<pre><code>hasCJKLanguage = true
+<pre tabindex="0"><code>hasCJKLanguage = true
 </code></pre><p>阅读时间：<code>.ReadingTime</code>，示例：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">约{{ .ReadingTime }}分钟读完
 </code></pre></div><p>分类 <code>.Params.categories</code>
@@ -282,18 +282,18 @@ title  =  &quot;木木木木木&quot;
 <p>当前年份，示例：<code>{{ now.Year }}</code></p>
 <p>页面类型：<code>{{ .Section }}</code></p>
 <p>首页判断：</p>
-<pre><code>{{ if .IsHome }}
+<pre tabindex="0"><code>{{ if .IsHome }}
 	……
 {{ end }}
-</code></pre><pre><code>{{ if not .IsHome }}……{{ end }}
+</code></pre><pre tabindex="0"><code>{{ if not .IsHome }}……{{ end }}
 </code></pre><p>定义变量：</p>
-<pre><code>{{ $address := &quot;123 Main St.&quot; }}
+<pre tabindex="0"><code>{{ $address := &quot;123 Main St.&quot; }}
 {{ $address }}
 </code></pre><p>定义模块，如 layouts/_default/baseof.html</p>
-<pre><code>{{ block &quot;main&quot; . }}
+<pre tabindex="0"><code>{{ block &quot;main&quot; . }}
 {{ end }}
 </code></pre><p>layouts/_default/list.html</p>
-<pre><code>{{ define &quot;main&quot; }}
+<pre tabindex="0"><code>{{ define &quot;main&quot; }}
   ……
 {{ end }}
 </code></pre><h3 id="短代码-shortcodes">短代码 Shortcodes</h3>
