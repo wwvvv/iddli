@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>文章 on 嘀嘀哩资源分享站</title>
-    <link>https://ddli.cn/posts/</link>
-    <description>Recent content in 文章 on 嘀嘀哩资源分享站</description>
+    <title>文章 on ACGR游戏基地</title>
+    <link>https://acgr.xyz/posts/</link>
+    <description>Recent content in 文章 on ACGR游戏基地</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 23 May 2021 15:04:55 +0800</lastBuildDate><atom:link href="https://ddli.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 May 2021 15:04:55 +0800</lastBuildDate><atom:link href="https://acgr.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
