@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-    <generator uri="https://gohugo.io/" version="0.88.1">Hugo</generator><title type="html"><![CDATA[嘀嘀哩资源分享站]]></title>
+    <generator uri="https://gohugo.io/" version="0.89.4">Hugo</generator><title type="html"><![CDATA[嘀嘀哩资源分享站]]></title>
     
     
     
             <link href="https://ddli.cn/atom.xml" rel="self" type="application/rss+xml" title="atom" />
             <link href="https://ddli.cn/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://ddli.cn/index.json" rel="alternate" type="application/json" title="JSON" />
-    <updated>2021-09-27T06:45:07+00:00</updated>
+    <updated>2021-11-19T00:48:35+00:00</updated>
     
     
     
