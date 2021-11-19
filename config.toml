@@ -1,8 +1,8 @@
-baseURL  =  "https://ddli.cn"
+baseURL  =  "https://acgr.xyz"
 languageCode = "zh-CN"
 # DefaultContentLanguage = "zh-CN"
-title  =  "嘀嘀哩资源分享站"
-subtitle = "嘀哩哩哩哩哩哩！嘀哩哩哩哩！"
+title  =  "ACGR游戏基地"
+subtitle = "二次元宇宙游戏基地！"
 
 theme  =  "hello-friend"
 summaryLength = 140
