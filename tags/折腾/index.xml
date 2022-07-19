@@ -54,7 +54,7 @@
 &lt;p&gt;直接看代码：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{ if .Params.path }}
     {{$Path := .Params.path}}
-    {{- range (readDir (printf &amp;quot;%s%s&amp;quot; &amp;quot;./static/images/&amp;quot; $Path )) -}}&amp;lt;img loading=&#39;lazy&#39; src=&amp;quot;{{(printf &amp;quot;/images/%s/%s&amp;quot; $Path .Name ) | absURL}}&amp;quot; /&amp;gt;{{- end -}}
+    {{- range (readDir (printf &amp;#34;%s%s&amp;#34; &amp;#34;./static/images/&amp;#34; $Path )) -}}&amp;lt;img loading=&amp;#39;lazy&amp;#39; src=&amp;#34;{{(printf &amp;#34;/images/%s/%s&amp;#34; $Path .Name ) | absURL}}&amp;#34; /&amp;gt;{{- end -}}
 {{ end }}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;当文章中写了 &lt;code&gt;path: 2004gd&lt;/code&gt; 表示 Hugo 遍历根目录 &lt;code&gt;/static/images/2004gd&lt;/code&gt; 内的图片并显示。&lt;/p&gt;</description>
     </item>
@@ -65,7 +65,7 @@
       <pubDate>Fri, 10 Apr 2020 14:46:43 +0800</pubDate>
       
       <guid>https://acgr.xyz/hugo-total-count/</guid>
-      <description>前者在某个大神主题中翻到，一句代码： 共 {{ len (where .Site.RegularPages &amp;quot;Section&amp;quot; &amp;quot;posts&amp;quot;) }} 篇文章 总字数没有现成参数，官方手册看到 .Scratch.Add 瞎折腾完成: {{$scratch := newScratch}} {{ range (where .Site.Pages &amp;quot;Kind&amp;quot; &amp;quot;page&amp;quot; )}} {{$scratch.Add &amp;quot;total&amp;quot; .WordCount}} {{ end }} 新建了个参数累加所有文章的 .WordCount 字数，一般放 footer 头几行，下面是调用代码： 总计 {{$scratch.Get &amp;quot;total&amp;quot; }} 字</description>
+      <description>前者在某个大神主题中翻到，一句代码： 共 {{ len (where .Site.RegularPages &amp;#34;Section&amp;#34; &amp;#34;posts&amp;#34;) }} 篇文章 总字数没有现成参数，官方手册看到 .Scratch.Add 瞎折腾完成: {{$scratch := newScratch}} {{ range (where .Site.Pages &amp;#34;Kind&amp;#34; &amp;#34;page&amp;#34; )}} {{$scratch.Add &amp;#34;total&amp;#34; .WordCount}} {{ end }} 新建了个参数累加所有文章的 .WordCount 字数，一般放 footer 头几行，下面是调用代码： 总计 {{$scratch.Get &amp;#34;total&amp;#34; }} 字</description>
     </item>
     
   </channel>

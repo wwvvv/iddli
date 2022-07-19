@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-    <generator uri="https://gohugo.io/" version="0.89.4">Hugo</generator><title type="html"><![CDATA[ACGR游戏基地]]></title>
+    <generator uri="https://gohugo.io/" version="0.101.0">Hugo</generator><title type="html"><![CDATA[ACGR游戏基地]]></title>
     
     
     
             <link href="https://acgr.xyz/atom.xml" rel="self" type="application/rss+xml" title="atom" />
             <link href="https://acgr.xyz/" rel="alternate" type="text/html" title="HTML" />
             <link href="https://acgr.xyz/index.json" rel="alternate" type="application/json" title="JSON" />
-    <updated>2021-11-19T00:55:31+00:00</updated>
+    <updated>2022-07-19T02:15:39+00:00</updated>
     
     
     

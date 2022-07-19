@@ -186,32 +186,32 @@
 <p>本文利用 Hugo 的 <a href="https://gohugo.io/extras/shortcodes/">Shortcodes</a> 功能和 <a href="https://gohugo.io/functions/getpage/">.GetPage</a> 函数来实现。</p>
 <h3 id="功能代码">功能代码</h3>
 <p>创建 <code>/layouts/shortcodes/link.html</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{$URL := .Get 0}}
-{{ with .Site.GetPage $URL }}
-&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview&#34;</span>&gt;
-  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--meta&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:100%;&#34;</span>&gt;
-    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--middle&#34;</span>&gt;
-      &lt;<span style="color:#f92672">h4</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--title&#34;</span>&gt;
-        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
-      &lt;/<span style="color:#f92672">h4</span>&gt;
-      &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--date&#34;</span>&gt;{{ .Date.Format ( default &#34;2006-01-02&#34;) }}&lt;/<span style="color:#f92672">time</span>&gt;
-      {{ if .Params.tags }}
-      &lt;<span style="color:#f92672">small</span>&gt;{{ range .Params.tags }}#{{ . }}&amp;nbsp;{{ end }}&lt;/<span style="color:#f92672">small</span>&gt;
-      {{ end }}
-      &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;max-height:105px;overflow:hidden;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--excerpt&#34;</span>&gt;
-        {{ .Summary | plainify}}
-      &lt;/<span style="color:#f92672">section</span>&gt;
-    &lt;/<span style="color:#f92672">div</span>&gt;
-  &lt;/<span style="color:#f92672">div</span>&gt;
-&lt;/<span style="color:#f92672">div</span>&gt;
-{{ end }}
-</code></pre></div><h3 id="样式代码">样式代码</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{$URL := .Get 0}}
+</span></span><span style="display:flex;"><span>{{ with .Site.GetPage $URL }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--meta&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:100%;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--middle&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">h4</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--title&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">h4</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">time</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--date&#34;</span>&gt;{{ .Date.Format ( default &#34;2006-01-02&#34;) }}&lt;/<span style="color:#f92672">time</span>&gt;
+</span></span><span style="display:flex;"><span>      {{ if .Params.tags }}
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">small</span>&gt;{{ range .Params.tags }}#{{ . }}&amp;nbsp;{{ end }}&lt;/<span style="color:#f92672">small</span>&gt;
+</span></span><span style="display:flex;"><span>      {{ end }}
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;max-height:105px;overflow:hidden;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post-preview--excerpt&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        {{ .Summary | plainify}}
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">section</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><h3 id="样式代码">样式代码</h3>
 <p>样式 CSS 代码需自行调配，个人是复用豆瓣条目的：</p>
 
 
 <h3 id="食用方式">食用方式</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">\{\{&lt;<span style="color:#f92672">link</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">bitcron-auto-article-refer</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;\}\}
-</code></pre></div><p>文章内去掉反斜杠 <code>\</code> 插入即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>\{\{&lt;<span style="color:#f92672">link</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">bitcron-auto-article-refer</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&gt;\}\}
+</span></span></code></pre></div><p>文章内去掉反斜杠 <code>\</code> 插入即可。</p>
 <p>其中 <code>link</code> 匹配短代码模板 <code>link.html</code> ，之后填的 <code>bitcron-auto-article-refer</code> 是文章 md 的文件名。</p>
       
     </div>
@@ -382,11 +382,11 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="copyright">
-      <span>共 32 篇文章</span><span> 28788 字</span>
+      <span>共 32 篇文章</span><span> 28678 字</span>
     </div>
     
       <div class="copyright">
-        <span>© 2021 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
       </div>
     
   </div>

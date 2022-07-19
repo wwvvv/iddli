@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="不折腾点东西总觉得浑浑噩噩，折腾点东西搞得脑袋晕晕乎乎！
 折腾需求 为更新 https://edui.fun/ 导航站能随手些，造了 Gridea Theme WebStack 。每次得源文件切换加载，但只为加几行代码，等等等；
-折腾一天，已实现直接在 GitHub master 添加代码，Github Actions  自动构建 Hugo 静态文件到 gh-pages 分支，外加同步 webhook 到自己的服务器。
+折腾一天，已实现直接在 GitHub master 添加代码，Github Actions 自动构建 Hugo 静态文件到 gh-pages 分支，外加同步 webhook 到自己的服务器。
 再也不用 git 来 git 去！
 "/>
 <meta name="keywords" content=""/>
@@ -264,19 +264,19 @@ jobs:
 <pre tabindex="0"><code>http://1.1.1.1/hook?access_key=密钥&amp;param=immmmm.com
 </code></pre><p>ip 和域名需需改，同时宝塔后台的 webhooks 添加同步代码，需修改本地路径、github 项目路径，代码如下：</p>
 <pre tabindex="0"><code>#!/bin/bash
-echo &quot;&quot;
-date --date='0 days ago' &quot;+%Y-%m-%d %H:%M:%S&quot;
-echo &quot;Start&quot;
+echo &#34;&#34;
+date --date=&#39;0 days ago&#39; &#34;+%Y-%m-%d %H:%M:%S&#34;
+echo &#34;Start&#34;
 
 #修改本地路径、github 项目路径
-gitPath=&quot;/www/wwwroot/immmmm.com&quot;
-gitHttp=&quot;https://github.com/lmm214/immmmm.git&quot;
+gitPath=&#34;/www/wwwroot/immmmm.com&#34;
+gitHttp=&#34;https://github.com/lmm214/immmmm.git&#34;
 
-echo &quot;Web站点路径：$gitPath&quot;
-if [ -d &quot;$gitPath&quot; ]; then
+echo &#34;Web站点路径：$gitPath&#34;
+if [ -d &#34;$gitPath&#34; ]; then
         cd $gitPath
-        if [ ! -d &quot;.git&quot; ]; then
-                echo &quot;在该目录下克隆 git&quot;
+        if [ ! -d &#34;.git&#34; ]; then
+                echo &#34;在该目录下克隆 git&#34;
                 git clone -b gh-pages $gitHttp gittemp
                 mv gittemp/.git .
                 rm -rf gittemp
@@ -284,11 +284,11 @@ if [ -d &quot;$gitPath&quot; ]; then
         git reset --hard gh-pages
         git pull
         chown -R www:www $gitPath
-        echo &quot;End&quot;
+        echo &#34;End&#34;
         exit
 else
-        echo &quot;该项目路径不存在&quot;
-        echo &quot;End&quot;
+        echo &#34;该项目路径不存在&#34;
+        echo &#34;End&#34;
         exit
 fi
 </code></pre><h3 id="后话一点点-">后话一点点 🤏</h3>
@@ -471,11 +471,11 @@ fi
 <footer class="footer">
   <div class="footer__inner">
     <div class="copyright">
-      <span>共 32 篇文章</span><span> 28788 字</span>
+      <span>共 32 篇文章</span><span> 28678 字</span>
     </div>
     
       <div class="copyright">
-        <span>© 2021 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
       </div>
     
   </div>

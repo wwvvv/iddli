@@ -182,13 +182,13 @@ https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hugo-themes.md
   
     <div class="post-content">
       <p>目前发文是直接在 Github 前端进行，Hugo 的构建交给 <a href="https://immmmm.com/hugo-github-actions/">Github Actions</a> 实现自动化部署。因此，产生个需求，文章里改个错别字什么的，能不能一键直达 GIthub 编辑页面？</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"># 当面页面链接
-https://immmmm.com/hugo-themes/
-# Github 编辑页面链接
-https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hugo-themes.md
-</code></pre></div><p>想想是可行的，无非是根据当前文章的链接构建编辑页面的链接。直接放代码：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/lmm214/immmmm/edit/master/content/{{ replace .File.Path &#34;</span><span style="color:#960050;background-color:#1e0010">\\&#34;</span> <span style="color:#960050;background-color:#1e0010">&#34;/&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;编辑文章&lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><p>为了页面美观，偷偷加到了某个地方。 ✌️</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span># 当面页面链接
+</span></span><span style="display:flex;"><span>https://immmmm.com/hugo-themes/
+</span></span><span style="display:flex;"><span># Github 编辑页面链接
+</span></span><span style="display:flex;"><span>https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hugo-themes.md
+</span></span></code></pre></div><p>想想是可行的，无非是根据当前文章的链接构建编辑页面的链接。直接放代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/lmm214/immmmm/edit/master/content/{{ replace .File.Path &#34;</span><span style="color:#960050;background-color:#1e0010">\\&#34;</span> <span style="color:#960050;background-color:#1e0010">&#34;/&#34;</span> <span style="color:#960050;background-color:#1e0010">}}&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span>&gt;编辑文章&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p>为了页面美观，偷偷加到了某个地方。 ✌️</p>
       
     </div>
   
@@ -358,11 +358,11 @@ https://github.com/lmm214/immmmm/edit/master/content/posts/coding/hugo-themes.md
 <footer class="footer">
   <div class="footer__inner">
     <div class="copyright">
-      <span>共 32 篇文章</span><span> 28788 字</span>
+      <span>共 32 篇文章</span><span> 28678 字</span>
     </div>
     
       <div class="copyright">
-        <span>© 2021 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
       </div>
     
   </div>

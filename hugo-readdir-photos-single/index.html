@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="效果见文章底部，这些图片非手动一张张插入，文章头部一句 path: 2004gd 搞定！
 直接看代码：
-{{ if .Params.path }} {{$Path := .Params.path}} {{- range (readDir (printf &amp;quot;%s%s&amp;quot; &amp;quot;./static/images/&amp;quot; $Path )) -}}&amp;lt;img loading=&#39;lazy&#39; src=&amp;quot;{{(printf &amp;quot;/images/%s/%s&amp;quot; $Path .Name ) | absURL}}&amp;quot; /&amp;gt;{{- end -}} {{ end }} 当文章中写了 path: 2004gd 表示 Hugo 遍历根目录 /static/images/2004gd 内的图片并显示。
+{{ if .Params.path }} {{$Path := .Params.path}} {{- range (readDir (printf &amp;#34;%s%s&amp;#34; &amp;#34;./static/images/&amp;#34; $Path )) -}}&amp;lt;img loading=&amp;#39;lazy&amp;#39; src=&amp;#34;{{(printf &amp;#34;/images/%s/%s&amp;#34; $Path .Name ) | absURL}}&amp;#34; /&amp;gt;{{- end -}} {{ end }} 当文章中写了 path: 2004gd 表示 Hugo 遍历根目录 /static/images/2004gd 内的图片并显示。
 "/>
 <meta name="keywords" content=""/>
 <meta name="referrer" content="same-origin">
@@ -27,7 +27,7 @@
 直接看代码：
 {{ if .Params.path }}
     {{$Path := .Params.path}}
-    {{- range (readDir (printf &quot;%s%s&quot; &quot;./static/images/&quot; $Path )) -}}&lt;img loading=&#39;lazy&#39; src=&quot;{{(printf &quot;/images/%s/%s&quot; $Path .Name ) | absURL}}&quot; /&gt;{{- end -}}
+    {{- range (readDir (printf &#34;%s%s&#34; &#34;./static/images/&#34; $Path )) -}}&lt;img loading=&#39;lazy&#39; src=&#34;{{(printf &#34;/images/%s/%s&#34; $Path .Name ) | absURL}}&#34; /&gt;{{- end -}}
 {{ end }}
 当文章中写了 path: 2004gd 表示 Hugo 遍历根目录 /static/images/2004gd 内的图片并显示。" />
 <meta property="og:type" content="article" />
@@ -188,14 +188,14 @@
 <p>直接看代码：</p>
 <pre tabindex="0"><code>{{ if .Params.path }}
     {{$Path := .Params.path}}
-    {{- range (readDir (printf &quot;%s%s&quot; &quot;./static/images/&quot; $Path )) -}}&lt;img loading='lazy' src=&quot;{{(printf &quot;/images/%s/%s&quot; $Path .Name ) | absURL}}&quot; /&gt;{{- end -}}
+    {{- range (readDir (printf &#34;%s%s&#34; &#34;./static/images/&#34; $Path )) -}}&lt;img loading=&#39;lazy&#39; src=&#34;{{(printf &#34;/images/%s/%s&#34; $Path .Name ) | absURL}}&#34; /&gt;{{- end -}}
 {{ end }}
 </code></pre><p>当文章中写了 <code>path: 2004gd</code> 表示 Hugo 遍历根目录 <code>/static/images/2004gd</code> 内的图片并显示。</p>
 <p>这功能其实之前 Bitcron 的主题里就有，太符合老年人的需求了，一句话，一堆图片，一篇文章搞定！</p>
 <p>当然，如果使用 Github 托管，随手羊毛撸起，<code>lmm214/immmmm@gh-pages</code> 需自行更改：</p>
 <pre tabindex="0"><code>{{ if .Params.path }}
     {{$Path := .Params.path}}
-    {{- range (readDir (printf &quot;%s%s&quot; &quot;./static/images/&quot; $Path )) -}}&lt;img loading='lazy' src=&quot;{{(printf &quot;https://cdn.jsdelivr.net/gh/lmm214/immmmm@gh-pages/images/%s/%s&quot; $Path .Name ) | absURL}}&quot; /&gt;{{- end -}}
+    {{- range (readDir (printf &#34;%s%s&#34; &#34;./static/images/&#34; $Path )) -}}&lt;img loading=&#39;lazy&#39; src=&#34;{{(printf &#34;https://cdn.jsdelivr.net/gh/lmm214/immmmm@gh-pages/images/%s/%s&#34; $Path .Name ) | absURL}}&#34; /&gt;{{- end -}}
 {{ end }}
 </code></pre><p>注：代码仅实现功能，灯箱效果什么的需要自行适配主题。</p>
       
@@ -370,11 +370,11 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="copyright">
-      <span>共 32 篇文章</span><span> 28788 字</span>
+      <span>共 32 篇文章</span><span> 28678 字</span>
     </div>
     
       <div class="copyright">
-        <span>© 2021 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
       </div>
     
   </div>

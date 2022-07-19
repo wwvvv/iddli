@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.89.4" />
+	<meta name="generator" content="Hugo 0.101.0" />
     
       <title>ACGR游戏基地</title>
     
@@ -490,7 +490,7 @@
 <p>直接看代码：</p>
 <pre tabindex="0"><code>{{ if .Params.path }}
     {{$Path := .Params.path}}
-    {{- range (readDir (printf &quot;%s%s&quot; &quot;./static/images/&quot; $Path )) -}}&lt;img loading='lazy' src=&quot;{{(printf &quot;/images/%s/%s&quot; $Path .Name ) | absURL}}&quot; /&gt;{{- end -}}
+    {{- range (readDir (printf &#34;%s%s&#34; &#34;./static/images/&#34; $Path )) -}}&lt;img loading=&#39;lazy&#39; src=&#34;{{(printf &#34;/images/%s/%s&#34; $Path .Name ) | absURL}}&#34; /&gt;{{- end -}}
 {{ end }}
 </code></pre><p>当文章中写了 <code>path: 2004gd</code> 表示 Hugo 遍历根目录 <code>/static/images/2004gd</code> 内的图片并显示。</p>
         <div><a class="read-more button" href="/hugo-readdir-photos-single/">阅读全文 →</a></div>
@@ -602,11 +602,11 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="copyright">
-      <span>共 32 篇文章</span><span> 28788 字</span>
+      <span>共 32 篇文章</span><span> 28678 字</span>
     </div>
     
       <div class="copyright">
-        <span>© 2021 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
       </div>
     
   </div>

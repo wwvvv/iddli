@@ -272,7 +272,7 @@
 <p>直接看代码：</p>
 <pre tabindex="0"><code>{{ if .Params.path }}
     {{$Path := .Params.path}}
-    {{- range (readDir (printf &quot;%s%s&quot; &quot;./static/images/&quot; $Path )) -}}&lt;img loading='lazy' src=&quot;{{(printf &quot;/images/%s/%s&quot; $Path .Name ) | absURL}}&quot; /&gt;{{- end -}}
+    {{- range (readDir (printf &#34;%s%s&#34; &#34;./static/images/&#34; $Path )) -}}&lt;img loading=&#39;lazy&#39; src=&#34;{{(printf &#34;/images/%s/%s&#34; $Path .Name ) | absURL}}&#34; /&gt;{{- end -}}
 {{ end }}
 </code></pre><p>当文章中写了 <code>path: 2004gd</code> 表示 Hugo 遍历根目录 <code>/static/images/2004gd</code> 内的图片并显示。</p>
         <div><a class="read-more button" href="/hugo-readdir-photos-single/">阅读全文 →</a></div>
@@ -306,14 +306,14 @@
       <div class="post-content $PostCate">
       
         <p>前者在某个大神主题中翻到，一句代码：</p>
-<pre tabindex="0"><code>共 {{ len (where .Site.RegularPages &quot;Section&quot; &quot;posts&quot;) }} 篇文章
+<pre tabindex="0"><code>共 {{ len (where .Site.RegularPages &#34;Section&#34; &#34;posts&#34;) }} 篇文章
 </code></pre><p>总字数没有现成参数，官方手册看到 <a href="https://gohugo.io/functions/scratch/">.Scratch.Add</a> 瞎折腾完成:</p>
 <pre tabindex="0"><code>{{$scratch := newScratch}}
-{{ range (where .Site.Pages &quot;Kind&quot; &quot;page&quot; )}}
-    {{$scratch.Add &quot;total&quot; .WordCount}}
+{{ range (where .Site.Pages &#34;Kind&#34; &#34;page&#34; )}}
+    {{$scratch.Add &#34;total&#34; .WordCount}}
 {{ end }}
 </code></pre><p>新建了个参数累加所有文章的 <code>.WordCount</code> 字数，一般放 footer 头几行，下面是调用代码：</p>
-<pre tabindex="0"><code>总计 {{$scratch.Get &quot;total&quot; }} 字
+<pre tabindex="0"><code>总计 {{$scratch.Get &#34;total&#34; }} 字
 </code></pre>
         
       
@@ -454,14 +454,14 @@
         <h3 id="全站-site">全站 Site</h3>
 <p>网址：<code>.Site.BaseURL</code></p>
 <p>标题：<code>.Site.Title</code>，示例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}&#34;</span>&gt;{{ $.Site.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><p>副标题：<code>.Site.Params.description</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $.Site.BaseURL }}&#34;</span>&gt;{{ $.Site.Title }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p>副标题：<code>.Site.Params.description</code></p>
 <p>关键词：<code>.Site.Params.keywords</code></p>
 <p>头部菜单：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{ range $.Site.Menus.main }}
-	&lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .URL }}&#34;</span>&gt;{{ .Name }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
-{{ end }}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ range $.Site.Menus.main }}
+</span></span><span style="display:flex;"><span>	&lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .URL }}&#34;</span>&gt;{{ .Name }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div>
         <div><a class="read-more button" href="/hugo-template-code/">阅读全文 →</a></div>
       
       </div>
@@ -607,11 +607,11 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="copyright">
-      <span>共 32 篇文章</span><span> 28788 字</span>
+      <span>共 32 篇文章</span><span> 28678 字</span>
     </div>
     
       <div class="copyright">
-        <span>© 2021 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
       </div>
     
   </div>

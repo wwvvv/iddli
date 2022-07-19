@@ -189,27 +189,27 @@
 <p>仓库下载：<a href="https://github.com/lmm214/hugo-theme-webstack">https://github.com/lmm214/hugo-theme-webstack</a></p>
 <h3 id="配置说明">配置说明</h3>
 <p>Hugo 站点 <code>config.toml</code> 默认配置，新增各信息和功能的修改。</p>
-<pre tabindex="0"><code>theme = &quot;webstack&quot;
-version = &quot;20.06.09&quot;
+<pre tabindex="0"><code>theme = &#34;webstack&#34;
+version = &#34;20.06.09&#34;
 
 # 首页网址
-baseURL = &quot;https://edui.fun&quot;
+baseURL = &#34;https://edui.fun&#34;
 # 标题
-title = &quot;Edui.fun&quot;
+title = &#34;Edui.fun&#34;
 
 [params]
     # 副标题
-    subtitle = &quot;让教学有点意思&quot;
+    subtitle = &#34;让教学有点意思&#34;
     # 横条logo
-    logo = &quot;https://cdn.jsdelivr.net/gh/lmm214/edui@gh-pages/images/avatar.png&quot;
+    logo = &#34;https://cdn.jsdelivr.net/gh/lmm214/edui@gh-pages/images/avatar.png&#34;
     # logo 图标
-    logoM = &quot;https://cdn.jsdelivr.net/gh/lmm214/edui@gh-pages/images/eduifuns.png&quot;
+    logoM = &#34;https://cdn.jsdelivr.net/gh/lmm214/edui@gh-pages/images/eduifuns.png&#34;
     # css和js文件的cdn
-    cdn = &quot;https://cdn.jsdelivr.net/gh/lmm214/edui@gh-pages&quot;
+    cdn = &#34;https://cdn.jsdelivr.net/gh/lmm214/edui@gh-pages&#34;
     # 开启今日诗词
-    jinrishici = &quot;true&quot;
+    jinrishici = &#34;true&#34;
     # 开启访问量统计
-    busuanzi = &quot;true&quot;
+    busuanzi = &#34;true&#34;
 </code></pre><h3 id="主题使用">主题使用</h3>
 <p>主题目录：</p>
 <pre tabindex="0"><code>hugo-webstack
@@ -220,49 +220,49 @@ title = &quot;Edui.fun&quot;
 └── theme.toml
 </code></pre><p><code>links.toml</code> 示例：</p>
 <pre tabindex="0"><code>[[list]]
-tag = '在线工具'
-css = 'icon-globe'
+tag = &#39;在线工具&#39;
+css = &#39;icon-globe&#39;
 
 [[list.sub]]
-tag = '教学助手'
-css = 'icon-star'
+tag = &#39;教学助手&#39;
+css = &#39;icon-star&#39;
 
 [[list.sub.item]]
-description=&quot;随时随地打开，开启专注力训练&quot;
-siteLink=&quot;https://edui.fun/schulte/&quot;
-siteLogo=&quot;https://cdn.jsdelivr.net/gh/lmm214/images/logos/schulte.png&quot;
-siteName=&quot;舒尔特方格&quot;
+description=&#34;随时随地打开，开启专注力训练&#34;
+siteLink=&#34;https://edui.fun/schulte/&#34;
+siteLogo=&#34;https://cdn.jsdelivr.net/gh/lmm214/images/logos/schulte.png&#34;
+siteName=&#34;舒尔特方格&#34;
 
 [[list.sub]]
-tag = '图文影音'
-css = 'icon-pencil'
+tag = &#39;图文影音&#39;
+css = &#39;icon-pencil&#39;
 
 [[list.sub.item]]
-description=&quot;在线生成并打印描字帖、笔顺描写贴和常用字体模板&quot;
-siteLink=&quot;https://tool.lu/copybook/index.html&quot;
-siteLogo=&quot;https://cdn.jsdelivr.net/gh/lmm214/images/logos/toollu.png&quot;
-siteName=&quot;字帖生成器&quot;
+description=&#34;在线生成并打印描字帖、笔顺描写贴和常用字体模板&#34;
+siteLink=&#34;https://tool.lu/copybook/index.html&#34;
+siteLogo=&#34;https://cdn.jsdelivr.net/gh/lmm214/images/logos/toollu.png&#34;
+siteName=&#34;字帖生成器&#34;
 
 [[list]]
-tag = '实用软件'
-css = 'icon-desktop'
+tag = &#39;实用软件&#39;
+css = &#39;icon-desktop&#39;
 
 [[list.item]]
-description=&quot;一键部署新版本 Office 全家桶，免费！&quot;
-siteLink=&quot;https://otp.landian.vip/zh-cn/&quot;
-siteLogo=&quot;https://cdn.jsdelivr.net/gh/lmm214/images@master/logos/otp.png&quot;
-siteName=&quot;Office Tool Plus&quot;
+description=&#34;一键部署新版本 Office 全家桶，免费！&#34;
+siteLink=&#34;https://otp.landian.vip/zh-cn/&#34;
+siteLogo=&#34;https://cdn.jsdelivr.net/gh/lmm214/images@master/logos/otp.png&#34;
+siteName=&#34;Office Tool Plus&#34;
 
 
 [[list]]
-tag = '移动在线'
-css = 'icon-mobile'
+tag = &#39;移动在线&#39;
+css = &#39;icon-mobile&#39;
 
 [[list.item]]
-description=&quot;在线电子教材、必备古诗词、24点出题&quot;
-siteImage=&quot;https://cdn.jsdelivr.net/gh/lmm214/images/logos/exzz.jpg&quot;
-siteLogo=&quot;https://cdn.jsdelivr.net/gh/lmm214/images/logos/exzz.jpg&quot;
-siteName=&quot;二小智造&quot;
+description=&#34;在线电子教材、必备古诗词、24点出题&#34;
+siteImage=&#34;https://cdn.jsdelivr.net/gh/lmm214/images/logos/exzz.jpg&#34;
+siteLogo=&#34;https://cdn.jsdelivr.net/gh/lmm214/images/logos/exzz.jpg&#34;
+siteName=&#34;二小智造&#34;
 </code></pre><p><code>list</code> 为主导航，<code>list.sub</code> 子导航，其中 <code>item</code> 中如果有 <code>siteImage</code> 则开启图片模式，效果如下：</p>
 <p><img loading='lazy' src="https://lmm.elizen.me/images/2020/05/webstack-11.png" alt="webstack-11"  /></p>
 <h3 id="其他">其他</h3>
@@ -437,11 +437,11 @@ siteName=&quot;二小智造&quot;
 <footer class="footer">
   <div class="footer__inner">
     <div class="copyright">
-      <span>共 32 篇文章</span><span> 28788 字</span>
+      <span>共 32 篇文章</span><span> 28678 字</span>
     </div>
     
       <div class="copyright">
-        <span>© 2021 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
+        <span>© 2022 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> Theme by <a href="https://twitter.com/panr" target="_blank" rel="noopener">Panr</a></span>
       </div>
     
   </div>
