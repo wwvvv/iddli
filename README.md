@@ -1,5 +1,5 @@
 # Blog
-These are source files for my Blog: <https://www.acgr.xyz>
+These are source files for my Blog: <https://www.acgye.com>
 
 The site is hosted in `gh-pages` branch via GitHub Pages, powered by hugo.
 
