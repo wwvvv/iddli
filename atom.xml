@@ -4,22 +4,22 @@
     
     
     
-            <link href="https://acgr.xyz/atom.xml" rel="self" type="application/rss+xml" title="atom" />
-            <link href="https://acgr.xyz/" rel="alternate" type="text/html" title="HTML" />
-            <link href="https://acgr.xyz/index.json" rel="alternate" type="application/json" title="JSON" />
-    <updated>2022-07-19T02:15:39+00:00</updated>
+            <link href="https://www.acgye.com/atom.xml" rel="self" type="application/rss+xml" title="atom" />
+            <link href="https://www.acgye.com/" rel="alternate" type="text/html" title="HTML" />
+            <link href="https://www.acgye.com/index.json" rel="alternate" type="application/json" title="JSON" />
+    <updated>2022-07-19T02:19:41+00:00</updated>
     
     
     
     
-        <id>https://acgr.xyz/atom.xml</id>
+        <id>https://www.acgye.com/atom.xml</id>
     
         
         <entry>
             <title type="html"><![CDATA[心累]]></title>
-            <link href="https://acgr.xyz/2021-06-27/" rel="alternate" type="text/html" />
+            <link href="https://www.acgye.com/2021-06-27/" rel="alternate" type="text/html" />
             
-                <id>https://acgr.xyz/2021-06-27/</id>
+                <id>https://www.acgye.com/2021-06-27/</id>
             
             
             <published>2021-05-23T15:04:55+08:00</published>
@@ -37,7 +37,7 @@
                         
                             
                              
-                                <category scheme="https://acgr.xyz/tags/%E8%AF%8D%E7%A9%B7" term="%E8%AF%8D%E7%A9%B7" label="词穷" />
+                                <category scheme="https://www.acgye.com/tags/%E8%AF%8D%E7%A9%B7" term="%E8%AF%8D%E7%A9%B7" label="词穷" />
                             
                         
                     
@@ -48,9 +48,9 @@
         
         <entry>
             <title type="html"><![CDATA[越来越觉得]]></title>
-            <link href="https://acgr.xyz/2021-05-23/" rel="alternate" type="text/html" />
+            <link href="https://www.acgye.com/2021-05-23/" rel="alternate" type="text/html" />
             
-                <id>https://acgr.xyz/2021-05-23/</id>
+                <id>https://www.acgye.com/2021-05-23/</id>
             
             
             <published>2021-05-23T15:04:55+08:00</published>
@@ -68,7 +68,7 @@
                         
                             
                              
-                                <category scheme="https://acgr.xyz/tags/%E8%AF%8D%E7%A9%B7" term="%E8%AF%8D%E7%A9%B7" label="词穷" />
+                                <category scheme="https://www.acgye.com/tags/%E8%AF%8D%E7%A9%B7" term="%E8%AF%8D%E7%A9%B7" label="词穷" />
                             
                         
                     
@@ -79,9 +79,9 @@
         
         <entry>
             <title type="html"><![CDATA[《学习究竟是什么》阅读笔记]]></title>
-            <link href="https://acgr.xyz/book-isbn-9787513340243/" rel="alternate" type="text/html" />
+            <link href="https://www.acgye.com/book-isbn-9787513340243/" rel="alternate" type="text/html" />
             
-                <id>https://acgr.xyz/book-isbn-9787513340243/</id>
+                <id>https://www.acgye.com/book-isbn-9787513340243/</id>
             
             
             <published>2021-02-17T10:34:21+08:00</published>
@@ -157,7 +157,7 @@
                         
                             
                              
-                                <category scheme="https://acgr.xyz/tags/%E8%82%B2%E4%BA%BA" term="%E8%82%B2%E4%BA%BA" label="育人" />
+                                <category scheme="https://www.acgye.com/tags/%E8%82%B2%E4%BA%BA" term="%E8%82%B2%E4%BA%BA" label="育人" />
                             
                         
                     
@@ -168,9 +168,9 @@
         
         <entry>
             <title type="html"><![CDATA[安个 Big Sur 桌面先]]></title>
-            <link href="https://acgr.xyz/big-sur-desktop-picture/" rel="alternate" type="text/html" />
+            <link href="https://www.acgye.com/big-sur-desktop-picture/" rel="alternate" type="text/html" />
             
-                <id>https://acgr.xyz/big-sur-desktop-picture/</id>
+                <id>https://www.acgye.com/big-sur-desktop-picture/</id>
             
             
             <published>2020-06-27T13:58:52+08:00</published>
@@ -188,7 +188,7 @@
                         
                             
                              
-                                <category scheme="https://acgr.xyz/tags/%E6%97%A5%E5%B8%B8" term="%E6%97%A5%E5%B8%B8" label="日常" />
+                                <category scheme="https://www.acgye.com/tags/%E6%97%A5%E5%B8%B8" term="%E6%97%A5%E5%B8%B8" label="日常" />
                             
                         
                     
@@ -199,9 +199,9 @@
         
         <entry>
             <title type="html"><![CDATA[Hugo hello]]></title>
-            <link href="https://acgr.xyz/hugo-hello/" rel="alternate" type="text/html" />
+            <link href="https://www.acgye.com/hugo-hello/" rel="alternate" type="text/html" />
             
-                <id>https://acgr.xyz/hugo-hello/</id>
+                <id>https://www.acgye.com/hugo-hello/</id>
             
             
             <published>2020-06-26T21:59:00+08:00</published>
@@ -220,7 +220,7 @@
                         
                             
                              
-                                <category scheme="https://acgr.xyz/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
+                                <category scheme="https://www.acgye.com/tags/%E6%8A%98%E8%85%BE" term="%E6%8A%98%E8%85%BE" label="折腾" />
                             
                         
                     
